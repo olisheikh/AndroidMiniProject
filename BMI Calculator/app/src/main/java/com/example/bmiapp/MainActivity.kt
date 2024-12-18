@@ -68,26 +68,26 @@ class MainActivity : AppCompatActivity() {
  /*
     Toolbar function
  */
-fun showToolBar(activity: AppCompatActivity, toolbar: Toolbar) {
-    activity.setSupportActionBar(toolbar)
+ fun showToolBar(activity: AppCompatActivity, toolbar: Toolbar) {
+     activity.setSupportActionBar(toolbar)
+     val actionBar = activity.supportActionBar
+     actionBar?.setDisplayShowTitleEnabled(false)
 
-    activity.supportActionBar?.setDisplayShowTitleEnabled(false)
+     val title = TextView(activity).apply {
+         text = "BMI Calculator"
+         textSize = 24f
+         setTextColor(ContextCompat.getColor(context, android.R.color.white))
+         gravity = Gravity.CENTER
+     }
 
-    val title = TextView(activity).apply{
-        text = "BMI Calculator"
-        textSize = 24f
-        setTextColor(ContextCompat.getColor(context, android.R.color.white))
-        gravity = Gravity.CENTER
-    }
+     val layoutParams = Toolbar.LayoutParams(
+         Toolbar.LayoutParams.WRAP_CONTENT,
+         Toolbar.LayoutParams.WRAP_CONTENT,
+         Gravity.CENTER
+     )
+     toolbar.addView(title, layoutParams)
+ }
 
-    val layoutPar = Toolbar.LayoutParams(
-        Toolbar.LayoutParams.WRAP_CONTENT,
-        Toolbar.LayoutParams.WRAP_CONTENT,
-        Gravity.CENTER
-    )
-
-    toolbar.addView(title, layoutPar)
-}
 
  /*
     Calculate BMI function

@@ -8,15 +8,6 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-<!--    <TextView-->
-<!--        android:id="@+id/toolBarTitle"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="BMI Calculator"-->
-<!--        android:gravity="center"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="24sp"-->
-<!--        android:fontFamily="sans-serif-medium"/>-->
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
